@@ -16,6 +16,15 @@
 -- means that we can assume that both of <*>'s
 -- parameters are functors.
 
+-- pure would be to say that it takes a value and puts it in
+-- some sort of default (or pure) context—a minimal context that
+-- still yields that value.
+
+-- <*> It's a sort of a beefed up fmap. Whereas fmap takes a
+-- function and a functor and applies the function inside the functor, <*> takes a functor that has a function in it and another functor and sort of extracts that function
+-- from the first functor and then maps it over the second one.
+
+
 -- ghci> Just (+3) <*> Just 9
 -- Just 12
 -- ghci> pure (+3) <*> Just 10
